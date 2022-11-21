@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,25 +16,24 @@ class _MyAppState extends State<MyApp> {
   bool _obsecureText = true;
 
   @override
-  Widget build(BuildContext context) {
+  build(BuildContext context) {
     print(_obsecureText);
+
     return MaterialApp(
-        title: 'HANOMAN',
+        title: 'tes app',
         home: Scaffold(
           backgroundColor: Colors.amber[900]!,
           appBar: AppBar(
-            title: const Text(
-              'Tutorial penggunaan',
-              style: TextStyle(
-                fontSize: 13,
-                fontFamily: 'hind',
-              ),
-              textWidthBasis: TextWidthBasis.longestLine,
-            ),
             backgroundColor: Colors.amber[900]!,
-            leading: IconButton(
-              icon: Icon(Icons.error_sharp),
-              onPressed: () {},
+            title: Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.all(0),
+              child: ElevatedButton.icon(
+                onPressed: (() {}),
+                icon: Icon(Icons.error_sharp),
+                label: Text('tutorial penggunaan'),
+                style: ElevatedButton.styleFrom(primary: Colors.amber[900]!),
+              ),
             ),
           ),
           body: Center(
